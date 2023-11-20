@@ -1,19 +1,19 @@
 ## Task Manager Application
 
-Note: After creating a task, you can navigate to Today in the sidebar to view the created task. 
+**Note**: After creating a task, you can navigate to Today in the sidebar to view the created task. 
 
 ### Requirements
-1. used uuid package to identify each task as unique.
-2. For UI styling purposes, use tailwind CSS.
-3. added react-router-dom to manage routing based on the task.
-4. used heroicon for the icon purpose.
-5. JSONforms: to manage forms easily without any state-creation 
+1. used **uuid** package to identify each task as unique.
+2. For UI styling purposes, use **tailwind CSS**.
+3. added **react-router-dom** to manage routing based on the task.
+4. used **heroicon** for the icon purpose.
+5. **JSONforms**: to manage forms easily without any state-creation 
 
 ### Features
 1. Visit the /today route to find all the tasks created today. same as follows for overdue and upcoming based on the date
 2. Create a task with a task name, description, date of completion, priority, and project.
 3. create project
-4. Task Color will changes based on the priority, e.g
+4. Task Color will changes based on the priority, **e.g**
   - low -> Blue
   - medium -> Yellow
   - high -> Red
