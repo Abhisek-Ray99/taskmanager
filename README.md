@@ -4,6 +4,7 @@
 1. used uuid package to identify each task as unque.
 2. UI styling purpose used tailwind css.
 3. added react-router-dom to manage routing based on the task.
+4. used heroicon for the icon purpose.
 
 ### Features
 1. visit the /today route to find all the task created today. same as follow for overdue and upcoming based on the date
