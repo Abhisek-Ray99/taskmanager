@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "projects": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
