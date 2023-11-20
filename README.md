@@ -1,17 +1,17 @@
 ## Task Manager Application
 
-### Overview of the application.
+## Overview of the application.
 
 **Note**: After creating a task, you can navigate to Today in the sidebar to view the created task. 
 
-## Requirements
+### Requirements
 1. used **uuid** package to identify each task as unique.
 2. For UI styling purposes, use **tailwind CSS**.
 3. added **react-router-dom** to manage routing based on the task.
 4. used **heroicon** for the icon purpose.
 5. **JSONforms**: to manage forms easily without any state-creation 
 
-## Features
+### Features
 1. Visit the /today route to find all the tasks created today. same as follows for overdue and upcoming based on the date
 2. Create a task with a task name, description, date of completion, priority, and project.
 3. create project
@@ -20,7 +20,7 @@
   - medium -> Yellow
   - high -> Red
 
-## ScreenShots
+### ScreenShots
 
 ![Screenshot 2023-11-20 234950](https://github.com/Abhisek-Ray99/taskmanager/assets/66687450/8d7da115-7a09-4a40-a946-dfbbb9dd45db)
 
@@ -33,7 +33,10 @@
 ![Screenshot 2023-11-20 235504](https://github.com/Abhisek-Ray99/taskmanager/assets/66687450/a1ea9658-023d-4cb4-8b0d-47ebd92bea04)
 
 
-### Steps to install dependencies and run the application locally.
+## Steps to install dependencies and run the application locally.
 - Start create a new project with vite react
-`npm create vite@latest` or `yarn create vite`
+`npm create vite@latest` or `yarn create vite` 
+and choose react template to get started
+- run the project by the following command
+  `npm run dev` or `yarn run dev`
 
