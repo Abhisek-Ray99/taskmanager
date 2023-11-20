@@ -32,7 +32,7 @@ const SideBar = ({
               name="Overdue" />
             <SideComponent 
               icon={<ClockIcon className="h-5 w-5 text-green-500"/>}
-              routename="" 
+              routename="today" 
               name="Today" />
             <SideComponent 
               icon={<CalendarDaysIcon className="h-5 w-5 text-purple-500"/>}
@@ -40,12 +40,14 @@ const SideBar = ({
               name="Upcoming" />
           </div>
           <div className="px-4 py-8">
-            <div className="flex flex-row hover:bg-slate-300 pl-1 py-2 rounded-md items-center justify-between px-2">
-                <Link to="projects" className='text-md font-semibold'>My Projects</Link>
-                <div className='hover:bg-sky-500 hover:ring-sky-500 cursor-pointer rounded p-1 ring-1 ring-slate-900/5 shadow-lg' onClick={showProject}>
-                  <PlusIcon className="h-4 w-4 text-black"  />
-                </div>
-            </div>
+            <Link to="projects">
+              <div className="flex flex-row hover:bg-slate-300 pl-1 py-2 rounded-md items-center justify-between px-2 cursor-pointer" >
+                  <p className='text-md font-semibold font-mono'>My Projects</p>
+                  <div className='hover:bg-sky-500 hover:ring-sky-500  rounded p-1 ring-1 ring-slate-900/5 shadow-lg'>
+                    <PlusIcon className="h-4 w-4 text-black" onClick={showProject} />
+                  </div>
+              </div>
+            </Link>
             <div className='flex flex-col'>
             {
               projects.map((project, index) => (

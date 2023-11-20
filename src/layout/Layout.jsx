@@ -7,6 +7,7 @@ import formuischema from '../services/uischema.json'
 import projectschema from '../services/project-schema.json'
 import projectuischema from '../services/project-uischema.json'
 import { getDate } from '../utils';
+import { v4 as uuidv4 } from 'uuid';
 
 import {
   materialRenderers,
@@ -48,12 +49,14 @@ const Layout = () => {
       );
       if (existingProjectIndex !== -1) {
         newData[existingProjectIndex].tasks.push({
+          id: uuidv4(),
           ...currentData,
           checked: false,
         });
       }else{
         newData.push({
           tasks:[{
+            id: uuidv4(),
             ...currentData,
             checked: false
           }]
@@ -65,6 +68,7 @@ const Layout = () => {
       );
       if (existingProjectIndex !== -1) {
         newData[existingProjectIndex].tasks.push({
+          id: uuidv4(),
           ...currentData,
           checked: false,
         });
@@ -72,6 +76,7 @@ const Layout = () => {
         newData.push({
           name: chooseProject,
           tasks:[{
+            id: uuidv4(),
             ...currentData,
             checked: false
           }]
@@ -162,16 +167,18 @@ const Layout = () => {
     }
   }
 
+  const handleProjectModal = ()=> setProject(true)
+
   return (
     <div className='flex flex-row'>
         <SideBar 
           projects={newproject} 
           show={() => setShow(true)} 
-          showProject={()=> setProject(true)}
+          showProject={handleProjectModal}
           data={newData}
         />
         <div className='w-full ml-80 mr-10'>
-          <Outlet context={[setSearch, newData, handleDeleteTask, handleCheckedStatus]}/>
+          <Outlet context={{setSearch, newData, handleDeleteTask, handleCheckedStatus, newproject, handleProjectModal}}/>
         </div>
         <AppModal 
           show={show || search || project}

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { useParams, useLocation } from "react-router-dom";
-import Task from '../home/components/Task';
+import Task from '../activity/components/Task';
 
 const AppProject = () => {
   let { state } = useLocation();

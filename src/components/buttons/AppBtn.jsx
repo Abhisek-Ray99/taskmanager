@@ -6,9 +6,10 @@ function AppBtn({
   color,
   btnstyle,
   textstyle,
+  icon,
   ...others   
 }) {
-  const buttonClasses = `flex w-full rounded-md border border-transparent ${bgColor} text-base font-medium ${btnstyle}`
+  const buttonClasses = `flex rounded-md border border-transparent text-base font-medium cursor-pointer flex-row justify-center items-center ${bgColor} ${btnstyle}`
   const textClasses = `${color} ${textstyle}`
   return (
     <div 
@@ -16,6 +17,7 @@ function AppBtn({
       className={buttonClasses}
       {...others}
     >
+      {icon}
       <p className={textClasses}>{title}</p>
     </div>
   )
