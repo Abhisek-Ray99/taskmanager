@@ -34,9 +34,40 @@
 
 
 ## Steps to install dependencies and run the application locally.
+1. Run react locally Project with React
 - Start create a new project with vite react
 `npm create vite@latest` or `yarn create vite` 
 and choose react template to get started
 - run the project by the following command
   `npm run dev` or `yarn run dev`
+- visit **http://localhost:5173/** to find the web applicaiton.
+
+2. Setup Tailwind CSS for the project
+  - Install tailwindcss via npm, and then run the init command to generate your tailwind.config.js file.
+    ```
+    npm install -D tailwindcss
+    npx tailwindcss init
+    ```
+  - Add the paths to all of your template files in your tailwind.config.js file.
+    ```
+      /** @type {import('tailwindcss').Config} */
+      module.exports = {
+        content: [
+          "./src/**/*.{js,jsx,ts,tsx}",
+        ],
+        theme: {
+          extend: {},
+        },
+        plugins: [],
+      }
+    ```
+  - Add the @tailwind directives for each of Tailwind’s layers to your ./src/index.css file.
+    ```
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+    ```
+  - Here we go we installed tailwindcss. now can start your server by **`yarn run dev`**
+
+
 
